@@ -21,10 +21,6 @@ public class CompanyController {
 
     @RequestMapping(value = "/all")
     public @ResponseBody List<Company> getAllCompanies() {
-/*        Company company1 = new Company(3, "Test1");
-        Company company2 = new Company(4, "Test2");
-        return Arrays.asList(company1,company2);
-        */
        return service.findAll();
     }
 }
