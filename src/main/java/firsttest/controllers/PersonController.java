@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
 
+import java.util.List;
 import java.util.Random;
 
 @RestController
@@ -23,8 +24,13 @@ public class PersonController {
         return new Person(rand.nextInt(100),name, rand.nextInt(100));
     }
 
-    @RequestMapping("/{realname}")
+    @RequestMapping("/one/{realname}")
     public Person findPersonByName(@PathVariable("realname") String realname) {
         return service.findByName(realname);
+    }
+
+    @RequestMapping("/all")
+    public @ResponseBody List<Person> getAll() {
+        return service.findAll();
     }
 }

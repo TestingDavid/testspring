@@ -1,8 +1,8 @@
 package firsttest.main;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
 
 @Entity
 public class Person {
@@ -11,6 +11,9 @@ public class Person {
     private int id;
     private String name;
     private int age;
+    @ManyToOne @JoinColumn(name = "company_id")
+    @JsonBackReference
+    private Company company;
 
     public Person() {}
 
@@ -26,5 +29,9 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    public Company getCompany() {
+        return company;
     }
 }
