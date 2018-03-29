@@ -20,7 +20,7 @@
         <spring.version>4.3.11.RELEASE</spring.version>
         <spring-data-rest-webmvc.version>2.6.7.RELEASE</spring-data-rest-webmvc.version>
         <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
-        <mysql-connector.version>6.0.5</mysql-connector.version>
+        <mysql-connector.version>6.0.6</mysql-connector.version>
         <querydsl.version>4.1.4</querydsl.version>
         <spring-data-jpa.version>1.11.7.RELEASE</spring-data-jpa.version>
     </properties>

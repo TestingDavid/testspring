@@ -20,7 +20,7 @@ public class Config {
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost:3306/springtest");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/springtest?useLegacyDatetimeCode=false&useTimezone=true&serverTimezone=Europe/Berlin");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
 
