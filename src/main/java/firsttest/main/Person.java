@@ -23,6 +23,10 @@ public class Person {
         this.age = age;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
