@@ -19,7 +19,6 @@ public class PersonUpdateController {
     @RequestMapping(value = "/update/one", method = RequestMethod.POST)
     public ResponseEntity <String> persistPerson(@RequestBody Person person) {
         if(isValid(person)) {
-            System.out.println("Found person: " + person.getCompany().toString());
             service.save(person);
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }
